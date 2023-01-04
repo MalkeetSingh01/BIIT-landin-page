@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Cinzel&display=swap');
+
+*{
+    box-sizing:border-box;
+    font-family: 'Abril Fatface', cursive;
+    font-family: 'Cinzel', serif;
+    padding: 0;
+    margin: 0;
+    font-size: 1.19rem;
+    font-weight: bold;
+    
+}
+#about{
+    width: 60vw;
+    margin-top: 8vh;
+    margin-left: 10vw;
+}
+
+#ab-ig{
+    width: 250px;
+    height: 250px;
+}
+.container{
+    padding: 10px 10px;
+    /* padding-left: 10px; */
+    border: 1.4px solid rgb(225, 224, 224);
+    border-radius:1%;
+    margin: 10px;
+}
+.col{
+    /* border: 1pc solid rgb(221, 221, 221); */
+    background-color: rgb(232, 233, 233);
+    margin: 10px;
+}
+.row{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.cl{
+    /* background-color:transparent; */
+    width: min-content;
+}
+#btn{
+    font-size: 17px;
+    border-radius: 4%;
+    background-color: rgb(129, 129, 129);
+    padding: 4px;
+    color: white;
+    /* margin-left: 290px; */
+}
+.text{
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+    <link rel="stylesheet" href="first.css">
+
+    <!-- font awesome link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <div class="header-1">
+
+            <a href="" class="logo"><i class="fa-solid fa-dumbbell"></i></i>GYM</a>
+
+            <form action="" class="search-box-container">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="fas fa-search"></label>
+            </form>
+
+        </div>
+
+
+        <div class="header-2">
+
+            <div id="menu-bar" class="fas fa-bars"></div>
+
+            <nav class="navbar">
+                <a href="#home">home</a>
+                <a href="#home">category</a>
+                <a href="#home">product</a>
+                <a href="#home">deal</a>
+                <a href="#home">contact</a>
+            </nav>
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-user-circle"></a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+    <!-- custom js link  -->
+    <script src="first.js">
+    let menu = document.querySelector('#menu-bar');
+      let navbar = document.querySelector('.navbar');
+      let header = document.querySelector('.header-2');
+      
+      menu.addEventListener('click', () => {
+          menu.classList.toggle('fa-times');
+          navbar.classList.toggle('active');
+      });
+      
+      window.onscroll = () => {
+          menu.classList.remove('fa-times');
+          navbar.classList.remove('active');
+      
+          if (window.scrollY > 150) {
+              header.classList.add('active');
+          } else {
+              header.classList.remove('active');
+          }
+      
+      }</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta
+        name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <title>BAWA INTERNATIONAL</title>
+        <link rel="icon" type="image/x-icon" href="images/bawaLogo.png">
+        <link rel="stylesheet" href="index.css">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <!-- <script src="bower_components/sweetalert2/dist/sweetalert2.min.js"></script>
+                                <link
+                                rel="stylesheet" href="bower_components/sweetalert2/dist/sweetalert2.min.css"> -->
+
+        <!-- Include a polyfill for ES6 Promises (optional) for IE11 and Android browser -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script> --><script src="//cdn.jsdelivr.net/npm/sweetalert2@11"> </script>
+        <script src="sweetalert2.min.js"></script>
+        <link rel="stylesheet" href="sweetalert2.min.css">
+    </head>
+    <body>
+        <div id="div-nav-flex">
+            <div class="div-nav" id="div-nav1">
+                <nav id="nv" class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="#"><img id="img-logo" src="images/bawalogo.jpeg" alt="BAWA LOGO"></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item  nav-indent">
+                                    <a class="nav-link active hv1" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item  nav-indent">
+                                    <a class="nav-link hv1" href="#">About</a>
+                                </li>
+                            </ul>
+                            <form id="nav-search" class="d-flex">
+                                <input class="form-control me-2 nav-indent" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success s1" type="submit">Search</button>
+                            </form>
+                            <div id="login-l">
+                                <ul>
+                                    <li id="nav-login" class=" nav-item dropstart bg-light">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            <img class="bg-light" id="login-logo" src="images/loginLogo1.png" alt="log in">
+                                        </a>
+                                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <li onclick="loginFunc()">
+                                                <a class="dropdown-item" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" href="#">LogIn</a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#exampleModal1" href="#">Sign-up</a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <!-- <li>
+                                                                                                                                                                                                                                                                        <a class="dropdown-item" href="#">Something else here</a>
+                                                                                                                                                                                                                                                                    </li> -->
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+
+                <!-- <div  class="div-nav bg-light" id="div-nav2">
+                                                                                                                                        
+                                                                                                                                    </div> -->
+
+                <!-- login page ttoggle modal -->
+                <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"> <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">LOG IN</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    <label for="mail">Email</label>
+                                    <input type="text" id="mail-login" name="mail-login" required><br><br>
+                                    <label for="paswd">password</label>
+                                    <input type="text" id="paswd-login" name="paswd-login" required><br><br>
+                                    <input type="submit" onclick="loginOk()" value="LogIn">
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Forgot Password</button>
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <sign up -->
+                <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel1">Create Your Account</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form action="/action_page.php">
+                                    <label for="mail">Email</label>
+                                    <input type="text" id="mail" name="email" required><br><br>
+                                    <label for="paswd">password</label>
+                                    <input type="text" id="paswd" name="password" required><br><br>
+                                    <input type="submit" value="SignIn">
+                                </form>
+                            </div>
+                            <div
+                                class="modal-footer">
+                                <!-- <button type="button" class="btn btn-primary">Forgot Password</button> -->
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- headder -->
+            </div>
+            <div id="headder">
+                <div class="heading">
+                    <span id="headings">BAWA INTERNATIONAL</span>
+                </div>
+                <div class="heading">
+                    <span id="headings2">The Power Of Dreams</span>
+                </div>
+
+                <!-- crousal -->
+                <div id="med-crousal">
+
+                    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="images/med1.jpg" class="d-block w-100 med-img" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/med2.jpg" class="d-block w-100 med-img" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img
+                                src="images/med3.jpg" class="d-block w-100 med-img" alt="...">
+                            <!-- <div class="card" id="card-1" style="width: 18rem;">
+                                                                                                                                                                                                                <img src="images/product-2.jpg" class="card-img-top" alt="...">
+                                                                                                                                                                                                                <div class="card-body">
+                                                                                                                                                                                                                  <h5 class="card-title">Card title</h5>
+                                                                                                                                                                                                                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                                                                                                                                                                                                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                                                                                                                                                                                                                </div>
+                                                                                                                                                                                                              </div> -->
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- why register -->
+
+
+            <!-- products -->
+            <div id="product-flex" class="pro-f">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-4.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card1 title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card1 title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card1 title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card1 title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card1 title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card1 title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img src="images/product-5.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card1 title</h5>
+                        <p class="card-text"></p>
+                        <a href="#" class="btn btn-primary">Add TO Cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <!-- footer -->
+            <div
+                id="footer"><!-- <p>ncicun</p> -->
+
+
+            </div>
+            <!-- <button onclick="sweetAlert('Greetings', 'Hi', 'error');">cc,sc</button>
+                                        <button onclick="loginFunc1()">nnn</button>
+                                    </div> -->
+
+            <script>
+                // function loginFunc() {
+                //     Swal.fire('Any fool can use a computer')
+                // }
+                function loginOk() {
+                    const Toast = Swal.mixin({
+                        toast: true,
+                        position: 'top-end',
+                        showConfirmButton: false,
+                        timer: 3000,
+                        timerProgressBar: true,
+                        didOpen: (toast) => {
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
+                        }
+                    })
+
+                    Toast.fire({icon: 'success', title: 'Signed in successfully'})
+                }
+                // function loginFunc() {
+                //     alert("sls");
+                // }
+            </script>
+        </body>
+    </body>
+</html>
